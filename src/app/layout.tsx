@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -6,6 +6,14 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "TripMate Kuala Lumpur — On-Demand Ride Matching & Driver Board",
   description: "Request a ride in Kuala Lumpur. Drivers accept and lock rides directly. Off-platform Touch 'n Go & Bank Transfer payments.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
