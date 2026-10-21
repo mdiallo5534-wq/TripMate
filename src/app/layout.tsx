@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: "TripMate Kuala Lumpur — On-Demand Ride Matching & Driver Board",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <main style={{ flex: 1 }}>{children}</main>
           <Footer />
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );
