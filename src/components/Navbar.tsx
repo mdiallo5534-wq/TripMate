@@ -44,22 +44,37 @@ export const Navbar: React.FC = () => {
         </Link>
 
         {/* Navigation & Action Links */}
-        <nav style={{ display: "flex", alignItems: "center", gap: "0.65rem" }}>
+        <nav className="navbar-nav" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
           {/* Rider Board Link */}
           <Link
             href="/rider-board"
-            className="btn btn-outline"
-            style={{ display: "flex", alignItems: "center", gap: "0.35rem", fontSize: "0.85rem", padding: "0.45rem 0.8rem", fontWeight: 600 }}
+            className="btn btn-outline nav-btn"
+            style={{ display: "flex", alignItems: "center", gap: "0.35rem", fontSize: "0.85rem", padding: "0.45rem 0.75rem", fontWeight: 600 }}
             title="Track and manage your ride requests"
           >
-            <ClipboardList size={15} /> Rider Board
+            <ClipboardList size={16} />
+            <span className="nav-btn-text">Rider Board</span>
           </Link>
 
-          <Link href="/driver/rides" className="btn btn-outline" style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontWeight: 600 }}>
-            <Car size={18} /> Driver Board
+          <Link
+            href="/driver/rides"
+            className="btn btn-outline nav-btn"
+            style={{ display: "flex", alignItems: "center", gap: "0.35rem", fontSize: "0.85rem", padding: "0.45rem 0.75rem", fontWeight: 600 }}
+            title="Driver Board - Browse & accept rides"
+          >
+            <Car size={16} />
+            <span className="nav-btn-text">Driver Board</span>
           </Link>
-          <Link href="/request-ride" className="btn btn-primary" style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontWeight: 700 }}>
-            <Compass size={18} /> Order a Ride in KL
+
+          <Link
+            href="/request-ride"
+            className="btn btn-primary nav-btn nav-btn-primary"
+            style={{ display: "flex", alignItems: "center", gap: "0.35rem", fontSize: "0.85rem", padding: "0.45rem 0.85rem", fontWeight: 700 }}
+            title="Order a ride in Kuala Lumpur"
+          >
+            <Compass size={16} />
+            <span className="nav-btn-text-full">Order a Ride in KL</span>
+            <span className="nav-btn-text-short">Order Ride</span>
           </Link>
           <ThemeToggle />
         </nav>
